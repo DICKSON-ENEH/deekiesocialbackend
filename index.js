@@ -15,6 +15,7 @@ app.get("/", (req, res)=>{
         message:"success"
         })
 })
+app.use("/api/user")
 app.listen(port,()=>{
     console.log("connected", port)
 })
