@@ -133,6 +133,18 @@ const verifiedUser= async(req, res)=>{
         console.log(error)
     }
 }
+
+const sidgninuser = async(req, res)=>{
+    try{
+const {email, password} = req.body
+const user= await userModel.findOne({email})
+if(user){
+    const check = await bcrypt.compare(password, user.passowrd)
+}
+    }catch(error){
+        console.log(error)
+    }
+}
 module.exports= {
     createUser,
     updateUser,

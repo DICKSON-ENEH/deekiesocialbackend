@@ -15,7 +15,7 @@ app.get("/", (req, res)=>{
         message:"success"
         })
 })
-app.use("/api/user")
+app.use("/api/user", require("./Router/userRoutes"))
 app.listen(port,()=>{
     console.log("connected", port)
 })
